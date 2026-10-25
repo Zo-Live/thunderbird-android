@@ -364,7 +364,7 @@
     <string name="global_settings_privacy_incognito_keyboard">Incognito keyboard</string>
     <string name="global_settings_privacy_incognito_keyboard_detail">Ask the keyboard not to learn from what you type when composing messages</string>
     <string name="global_settings_privacy_hide_from_recents">Hide from recent tasks</string>
-    <string name="global_settings_privacy_hide_from_recents_detail">Don\'t show a card in the recent tasks list. The app keeps running in the background and can still be opened from the home screen or a notification.</string>
+    <string name="global_settings_privacy_hide_from_recents_detail">Don\'t show a card in the recent tasks list. The app keeps running in the background</string>
 
     <string name="global_settings_notification_quick_delete_title">Show \'Delete\' button</string>
     <string name="global_settings_notification_quick_delete_never">Never</string>

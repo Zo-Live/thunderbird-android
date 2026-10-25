@@ -58,6 +58,10 @@ class DefaultPrivacySettingsPreferenceManager(
             key = PrivacySettingKey.IncognitoKeyboard.value,
             defValue = PRIVACY_SETTINGS_DEFAULT_INCOGNITO_KEYBOARD,
         ),
+        isHideFromRecents = storage.getBoolean(
+            key = PrivacySettingKey.HideFromRecents.value,
+            defValue = PRIVACY_SETTINGS_DEFAULT_HIDE_FROM_RECENTS,
+        ),
     )
 
     private fun writeConfig(config: PrivacySettings) {
@@ -70,6 +74,10 @@ class DefaultPrivacySettingsPreferenceManager(
                 storageEditor.putBoolean(
                     PrivacySettingKey.IncognitoKeyboard.value,
                     config.isIncognitoKeyboardEnabled,
+                )
+                storageEditor.putBoolean(
+                    PrivacySettingKey.HideFromRecents.value,
+                    config.isHideFromRecents,
                 )
                 storageEditor.commit().also { commited ->
                     logger.verbose(TAG) { "writeConfig: storageEditor.commit() resulted in: $commited" }

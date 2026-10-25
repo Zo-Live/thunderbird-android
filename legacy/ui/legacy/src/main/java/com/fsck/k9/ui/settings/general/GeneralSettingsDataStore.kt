@@ -65,6 +65,7 @@ class GeneralSettingsDataStore(
             "privacy_hide_useragent" -> privacySettings.isHideUserAgent
             "privacy_hide_timezone" -> privacySettings.isHideTimeZone
             "privacy_incognito_keyboard" -> privacySettings.isIncognitoKeyboardEnabled
+            "privacy_hide_from_recents" -> privacySettings.isHideFromRecents
             "debug_logging" -> debuggingSettings.isDebugLoggingEnabled
             "sync_debug_logging" -> debuggingSettings.isSyncLoggingEnabled
             "sensitive_logging" -> debuggingSettings.isSensitiveLoggingEnabled
@@ -111,6 +112,7 @@ class GeneralSettingsDataStore(
             "privacy_hide_useragent" -> setIsHideUserAgent(isHideUserAgent = value)
             "privacy_hide_timezone" -> setIsHideTimeZone(isHideTimeZone = value)
             "privacy_incognito_keyboard" -> setIsIncognitoKeyboardEnabled(isIncognitoKeyboardEnabled = value)
+            "privacy_hide_from_recents" -> setIsHideFromRecents(isHideFromRecents = value)
             "debug_logging" -> setIsDebugLoggingEnabled(isDebugLoggingEnabled = value)
             "sync_debug_logging" -> setIsSyncLoggingEnabled(isSyncLoggingEnabled = value)
             "sensitive_logging" -> setIsSensitiveLoggingEnabled(isSensitiveLoggingEnabled = value)
@@ -758,6 +760,17 @@ class GeneralSettingsDataStore(
             settings.copy(
                 privacy = settings.privacy.copy(
                     isIncognitoKeyboardEnabled = isIncognitoKeyboardEnabled,
+                ),
+            )
+        }
+    }
+
+    private fun setIsHideFromRecents(isHideFromRecents: Boolean) {
+        skipSaveSettings = true
+        generalSettingsManager.update { settings ->
+            settings.copy(
+                privacy = settings.privacy.copy(
+                    isHideFromRecents = isHideFromRecents,
                 ),
             )
         }

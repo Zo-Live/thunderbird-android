@@ -559,6 +559,12 @@
             android:title="@string/global_settings_privacy_incognito_keyboard"
             />
 
+        <CheckBoxPreference
+            android:key="privacy_hide_from_recents"
+            android:summary="@string/global_settings_privacy_hide_from_recents_detail"
+            android:title="@string/global_settings_privacy_hide_from_recents"
+            />
+
     </PreferenceScreen>
 
     <PreferenceScreen

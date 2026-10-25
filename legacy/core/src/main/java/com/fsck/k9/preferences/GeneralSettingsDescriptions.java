@@ -67,6 +67,7 @@ import static net.thunderbird.core.preference.display.visualSettings.DisplayVisu
 import static net.thunderbird.core.preference.notification.NotificationPreferenceKt.NOTIFICATION_PREFERENCE_DEFAULT_IS_QUIET_TIME_ENABLED;
 import static net.thunderbird.core.preference.notification.NotificationPreferenceKt.NOTIFICATION_PREFERENCE_DEFAULT_QUIET_TIME_END;
 import static net.thunderbird.core.preference.notification.NotificationPreferenceKt.NOTIFICATION_PREFERENCE_DEFAULT_QUIET_TIME_STARTS;
+import static net.thunderbird.core.preference.privacy.PrivacySettingsKt.PRIVACY_SETTINGS_DEFAULT_HIDE_FROM_RECENTS;
 import static net.thunderbird.core.preference.privacy.PrivacySettingsKt.PRIVACY_SETTINGS_DEFAULT_HIDE_TIME_ZONE;
 import static net.thunderbird.core.preference.privacy.PrivacySettingsKt.PRIVACY_SETTINGS_DEFAULT_HIDE_USER_AGENT;
 
@@ -273,6 +274,9 @@ class GeneralSettingsDescriptions {
         ));
         s.put("hideTimeZone", Settings.versions(
             new V(32, new BooleanSetting(PRIVACY_SETTINGS_DEFAULT_HIDE_TIME_ZONE))
+        ));
+        s.put("hideFromRecents", Settings.versions(
+            new V(113, new BooleanSetting(PRIVACY_SETTINGS_DEFAULT_HIDE_FROM_RECENTS))
         ));
         s.put("lockScreenNotificationVisibility", Settings.versions(
             new V(37, new EnumSetting<>(LockScreenNotificationVisibility.class,

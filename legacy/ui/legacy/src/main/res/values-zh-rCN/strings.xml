@@ -944,6 +944,8 @@
     <string name="animation_setting_off">关</string>
     <string name="global_settings_privacy_incognito_keyboard">隐身键盘</string>
     <string name="global_settings_privacy_incognito_keyboard_detail">在撰写邮件时，让键盘不要从您的输入内容中学习</string>
+    <string name="global_settings_privacy_hide_from_recents">从最近任务隐藏</string>
+    <string name="global_settings_privacy_hide_from_recents_detail">不在最近任务列表中显示后台卡片。应用会继续在后台运行，仍可从桌面图标或通知打开。</string>
     <string name="sort_by_indicator">•</string>
     <string name="account_settings_signature_html_label">HTML 签名</string>
     <string name="account_settings_signature_is_html_label">将签名保存为 HTML</string>

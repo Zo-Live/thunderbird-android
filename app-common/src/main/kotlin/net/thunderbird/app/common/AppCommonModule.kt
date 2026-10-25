@@ -8,6 +8,7 @@ import net.thunderbird.app.common.activity.DefaultActivityProvider
 import net.thunderbird.app.common.appConfig.AndroidPlatformConfigProvider
 import net.thunderbird.app.common.core.appCommonCoreModule
 import net.thunderbird.app.common.feature.appCommonFeatureModule
+import net.thunderbird.app.common.recents.appCommonRecentsModule
 import net.thunderbird.app.common.startup.appCommonStartupModule
 import net.thunderbird.app.composition.appCompositionModule
 import net.thunderbird.core.android.common.activity.ActivityProvider
@@ -26,6 +27,7 @@ val appCommonModule: Module = module {
         appCommonAccountModule,
         appCommonCoreModule,
         appCommonFeatureModule,
+        appCommonRecentsModule,
         appCommonStartupModule,
     )
 

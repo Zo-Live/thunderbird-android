@@ -248,3 +248,22 @@ Agents MUST NOT:
 - Make breaking changes without explicit approval
 
 When in doubt, ask. It's always better to clarify than to guess wrong.
+
+## Fork Workflow
+
+This repository is a fork of [`thunderbird/thunderbird-android`](https://github.com/thunderbird/thunderbird-android). The
+`upstream` remote points to the upstream repository. Generic fork setup and sync instructions are documented in the
+[Contribution Workflow](docs/contributing/contribution-workflow.md); the rules below are specific to this fork.
+
+- `main` tracks `upstream/main` and MUST only contain fork-level changes (the README fork notice, this guide, and fork
+  automation). Feature and bug-fix work MUST NOT be committed to `main`.
+- All feature and bug-fix work MUST happen on a `feature/*` branch. The current feature branch is
+  `feature/hide-recents`.
+- Feature branches MUST NOT be merged into `main`; apart from fork-level changes, `main` only advances by merging
+  `upstream/main`.
+- Do not rebase or force-push `main`.
+- Update `main` from `upstream/main` before starting work, then merge `main` into the feature branch. The daily
+  `sync-upstream` workflow (`.github/workflows/sync-upstream.yml`) updates `main` automatically.
+- If the sync workflow fails because of a merge conflict, resolve it locally on `main` and push the result. Do not
+  bypass the conflict by force-pushing `main` or by discarding upstream changes.
+
